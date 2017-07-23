@@ -9,6 +9,10 @@ This specification defines the external format and encryption scheme of the
 token to help interoperability between userland implementations. Branca is closely
 based on [Fernet specification](https://github.com/fernet/spec/blob/master/Spec.md).
 
+Payload in Branca token is an arbitrary sequence of bytes. This means payload can
+be for example a JSON object, plain text string or even binary data serialized
+by [MessagePack](http://msgpack.org/) or [Protocol Buffers](https://developers.google.com/protocol-buffers/).
+
 ## Design Goals
 
 1. Secure
@@ -69,36 +73,38 @@ authenticated. In laymans terms, header can be seen but it cannot be tampered.
 
 The authentication tag is 128 bits ie. 16 bytes. This is the
 [Poly1305](https://en.wikipedia.org/wiki/Poly1305) message authentication
-code. It is used to make sure that the message, as well as the
+code. It is used to make sure that the payload, as well as the
 non-encrypted header has not been tampered with.
 
-NOTE! Some crypto libraries such as Libsodium offer [combined mode](https://download.libsodium.org/doc/secret-key_cryptography/ietf_chacha20-poly1305_construction.html) where the authentication tag and the encrypted message are
-stored together. You do not need to care about separating the tag from ciphertext.
+NOTE! Some crypto libraries such as Libsodium offer [combined mode](https://download.libsodium.org/doc/secret-key_cryptography/ietf_chacha20-poly1305_construction.html)
+where the authentication tag and the encrypted message are stored together.
+You do not need to care about separating the tag from ciphertext.
 This is usually what you want to use.
 
 ## Generating a Token
 
-Given a 256 bit ie. 32  byte secret key and an arbitrary message, generate a branca token with the following steps, in order:
+Given a 256 bit ie. 32  byte secret `key` and an arbitrary `payload`, generate a
+branca token with the following steps, in order:
 
 1. Generate a cryptocraphically secure `nonce`.
-2. If user has not provided `timestamp` record the current unixtime.
+2. If user has not provided `timestamp` use the current unixtime.
 3. Construct the `header` by concatenating `version`, `timestamp` and `nonce`.
-4. Encrypt the user given message with IETF ChaCha20-Poly1305 AEAD with user
+4. Encrypt the user given payload with IETF ChaCha20-Poly1305 AEAD with user
    provided secret `key`. Use `header` as the additional data for AEAD.
 5. Concatenate `header` and returned `ciphertext` and `tag` from step 4 together.
 6. Base62 encode the entire token.
 
 ## Verifying a Token
 
-Given a 256 bit ie. 32  byte secret key a token, to verify that the token is valid and recover the original unencrypted message, perform the following steps, in order:
+Given a 256 bit ie. 32  byte secret `key` a `token`, to verify that the token is valid and recover the original unencrypted `payload`, perform the following steps, in order:
 
 1. Base62 decode the token.
-2. Ensure the first byte of the token is `0xBA`.
-3. Extract the `header` ie. the first 17 bytes from the binary token.
+2. Ensure the first byte of the decoded token is `0xBA`.
+3. Extract the `header` ie. the first 17 bytes from the decoded token.
 4. Extract the `nonce` ie. the last 12 bytes from the `header`.
 5. Decrypt and verify the with IETF ChaCha20-Poly1305 AEAD with user
    provided secret `key` and `nonce` from previous step. Use `header` as the additional data for AEAD.
-6. If the user has specified a maximum age (or "time-to-live") for the token, ensure the recorded timestamp is not too far in the past.
+6. If the user has specified a maximum age (or "time-to-live") for the token, ensure the `timestamp` is not too far in the past.
 
 ## Libraries
 
@@ -111,7 +117,7 @@ Currently known implementations in the wild.
 
 ## Acceptance Test Vectors
 
-WIP. In the meanwhile see [JavaScript](https://github.com/tuupola/branca-js/blob/master/test.js) and [PHP](https://github.com/tuupola/branca-php/blob/master/tests/BrancaTest.php) example tests.
+TODO... In the meanwhile see [JavaScript](https://github.com/tuupola/branca-js/blob/master/test.js) and [PHP](https://github.com/tuupola/branca-php/blob/master/tests/BrancaTest.php) example tests.
 
 ## License
 
