@@ -96,15 +96,18 @@ token with the following steps, in order:
 
 ## Verifying a Token
 
-Given a 256 bit ie. 32  byte secret `key` a `token`, to verify that the token is valid and recover the original unencrypted `payload`, perform the following steps, in order:
+Given a 256 bit ie. 32  byte secret `key` a `token`, to verify that the token is valid and recover the original unencrypted `payload`, perform the following steps, in order.
 
 1. Base62 decode the token.
 2. Ensure the first byte of the decoded token is `0xBA`.
 3. Extract the `header` ie. the first 29 bytes from the decoded token.
 4. Extract the `nonce` ie. the last 24 bytes from the `header`.
-5. Decrypt and verify the with IETF XChaCha20-Poly1305 AEAD with user
-   provided secret `key` and `nonce` from previous step. Use `header` as the additional data for AEAD.
-6. If the user has specified a maximum age (or "time-to-live") for the token, ensure the `timestamp` is not too far in the past.
+5. Extract the `timestamp` ie. bytes 2 to 5 from the `header`.
+6. Extract `ciphertext|tag` combination ie. everything starting from byte 30.
+7. Optionally if you need separate `tag` extract the last 16 bytes from the `ciphertext|tag` combination from previous step. You don't need this if your crypto library supports combined mode, like libsodium.
+8. Decrypt and verify the with IETF XChaCha20-Poly1305 AEAD with user
+   provided secret `key`, `nonce` and optionally `tag`. Use `header` as the additional data for AEAD.
+9. Optionally if the user has specified a `ttl` when verifying the token add the `ttl` to `timestamp` and compare this to curren unixtime.
 
 ## Libraries
 
