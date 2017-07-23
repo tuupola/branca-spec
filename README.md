@@ -107,7 +107,7 @@ Given a 256 bit ie. 32  byte secret `key` a `token`, to verify that the token is
 7. Optionally if you need separate `tag` extract the last 16 bytes from the `ciphertext|tag` combination from previous step. You don't need this if your crypto library supports combined mode, like libsodium.
 8. Decrypt and verify the with IETF XChaCha20-Poly1305 AEAD with user
    provided secret `key`, `nonce` and optionally `tag`. Use `header` as the additional data for AEAD.
-9. Optionally if the user has specified a `ttl` when verifying the token add the `ttl` to `timestamp` and compare this to curren unixtime.
+9. Optionally if the user has specified a `ttl`, when verifying the token add the `ttl` to `timestamp` and compare this to current unixtime.
 
 ## Libraries
 
@@ -115,7 +115,7 @@ Currently known implementations in the wild.
 
 | Language | Author | Crypto library used |
 | -------- | ------ | -------------- |
-| [JavaScript](https://github.com/tuupola/branca-js) | [tuupola](https://github.com/tuupola) | [calvinmetcalf/chacha20poly1305](https://github.com/calvinmetcalf/chacha20poly1305)|
+| [JavaScript](https://github.com/tuupola/branca-js) | [tuupola](https://github.com/tuupola) | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js)|
 | [PHP](https://github.com/tuupola/branca-php) | [tuupola](https://github.com/tuupola) | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 
 ## Acceptance Test Vectors
