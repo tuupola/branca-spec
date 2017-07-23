@@ -6,7 +6,7 @@ Authenticated Encrypted API Tokens (IETF ChaCha20-Poly1305).
 
 Branca allows you to generate and verify encrypted API tokens.
 This specification defines the external format and encryption scheme of the
-token to help interoperability userland between implementations. Branca is closely
+token to help interoperability between userland implementations. Branca is closely
 based on [Fernet specification](https://github.com/fernet/spec/blob/master/Spec.md).
 
 ## Design Goals
@@ -97,7 +97,7 @@ Given a 256 bit ie. 32  byte secret key a token, to verify that the token is val
 3. Extract the `header` ie. the first 17 bytes from the binary token.
 4. Extract the `nonce` ie. the last 12 bytes from the `header`.
 5. Decrypt and verify the with IETF ChaCha20-Poly1305 AEAD with user
-   provided secret `key` and `nonce` from previous step.. Use `header` as the additional data for AEAD.
+   provided secret `key` and `nonce` from previous step. Use `header` as the additional data for AEAD.
 6. If the user has specified a maximum age (or "time-to-live") for the token, ensure the recorded timestamp is not too far in the past.
 
 ## Libraries
