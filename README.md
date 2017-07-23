@@ -73,6 +73,15 @@ NOTE! Some crypto libraries such as Libsodium offer [combined mode](https://down
 stored together. You do not need to care about separating the tag from ciphertext.
 This is usually what you want to use.
 
+## Implementations
+
+Currently known implementations in wild.
+
+| Language | Author | Crypto library used |
+| -------- | ------ | -------------- |
+| [JavaScript](https://github.com/tuupola/branca-js) | [tuupola](https://github.com/tuupola) | [calvinmetcalf/chacha20poly1305](https://github.com/calvinmetcalf/chacha20poly1305)|
+| [PHP](https://github.com/tuupola/branca-php) | [tuupola](https://github.com/tuupola) | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
