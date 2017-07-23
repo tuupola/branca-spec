@@ -1,6 +1,6 @@
 # Branca Specification
 
-Authenticated Encrypted API Tokens (IETF ChaCha20-Poly1305).
+Authenticated Encrypted API Tokens (IETF XChaCha20-Poly1305).
 
 ## What?
 
@@ -29,7 +29,7 @@ consists of version, timestamp and nonce. Putting them all together we get
 following structure.
 
 ```
-Version || Timestamp || Nonce || Ciphertext || Tag
+Version (1B) || Timestamp (4B) || Nonce (24B) || Ciphertext (*B) || Tag (16B)
 ```
 
 String representation of the above binary token must use base62 encoding with
@@ -58,12 +58,12 @@ integer overflow will happen in year 2106.
 
 ### Nonce
 
-Nonce is 96 bits ie. 12 bytes. These should be cryptographically secure random
+Nonce is 192 bits ie. 24 bytes. These should be cryptographically secure random
 bytes and never reused between tokens.
 
 ### Ciphertext
 
-Payload is encrypted and authenticated using [IETF ChaCha20-Poly1305](https://tools.ietf.org/html/rfc7539).
+Payload is encrypted and authenticated using [IETF XChaCha20-Poly1305](https://download.libsodium.org/doc/secret-key_cryptography/xchacha20-poly1305_construction.html).
 Note that this is [Authenticated Encryption with Additional Data (AEAD)](https://tools.ietf.org/html/rfc7539#section-2.8) where the
 he header part of the token is the additional data. This means the data in the
 header (version, timestamp and nonce) is not encrypted, it is only
@@ -76,7 +76,7 @@ The authentication tag is 128 bits ie. 16 bytes. This is the
 code. It is used to make sure that the payload, as well as the
 non-encrypted header has not been tampered with.
 
-NOTE! Some crypto libraries such as Libsodium offer [combined mode](https://download.libsodium.org/doc/secret-key_cryptography/ietf_chacha20-poly1305_construction.html)
+NOTE! Some crypto libraries such as Libsodium offer [combined mode](https://download.libsodium.org/doc/secret-key_cryptography/ietf_Xchacha20-poly1305_construction.html)
 where the authentication tag and the encrypted message are stored together.
 You do not need to care about separating the tag from ciphertext.
 This is usually what you want to use.
@@ -84,12 +84,12 @@ This is usually what you want to use.
 ## Generating a Token
 
 Given a 256 bit ie. 32  byte secret `key` and an arbitrary `payload`, generate a
-branca token with the following steps, in order:
+token with the following steps, in order:
 
 1. Generate a cryptocraphically secure `nonce`.
 2. If user has not provided `timestamp` use the current unixtime.
 3. Construct the `header` by concatenating `version`, `timestamp` and `nonce`.
-4. Encrypt the user given payload with IETF ChaCha20-Poly1305 AEAD with user
+4. Encrypt the user given payload with IETF XChaCha20-Poly1305 AEAD with user
    provided secret `key`. Use `header` as the additional data for AEAD.
 5. Concatenate `header` and returned `ciphertext` and `tag` from step 4 together.
 6. Base62 encode the entire token.
@@ -100,9 +100,9 @@ Given a 256 bit ie. 32  byte secret `key` a `token`, to verify that the token is
 
 1. Base62 decode the token.
 2. Ensure the first byte of the decoded token is `0xBA`.
-3. Extract the `header` ie. the first 17 bytes from the decoded token.
-4. Extract the `nonce` ie. the last 12 bytes from the `header`.
-5. Decrypt and verify the with IETF ChaCha20-Poly1305 AEAD with user
+3. Extract the `header` ie. the first 29 bytes from the decoded token.
+4. Extract the `nonce` ie. the last 24 bytes from the `header`.
+5. Decrypt and verify the with IETF XChaCha20-Poly1305 AEAD with user
    provided secret `key` and `nonce` from previous step. Use `header` as the additional data for AEAD.
 6. If the user has specified a maximum age (or "time-to-live") for the token, ensure the `timestamp` is not too far in the past.
 
