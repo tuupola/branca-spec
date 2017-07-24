@@ -74,19 +74,19 @@ authenticated. In laymans terms, header can be seen but it cannot be tampered.
 The authentication tag is 128 bits ie. 16 bytes. This is the
 [Poly1305](https://en.wikipedia.org/wiki/Poly1305) message authentication
 code. It is used to make sure that the payload, as well as the
-non-encrypted header has not been tampered with.
+non-encrypted header have not been tampered with.
 
 ## Working With Tokens
 
-Instructions below your crypto library supports combined mode. In combined mode,
-the authentication tag and the encrypted message are stored together. If your
+Instructions below assume your crypto library supports combined mode. In combined
+mode the authentication tag and the encrypted message are stored together. If your
 crypto library does not provide combined mode the `tag` is last 16 bytes of the
 `ciphertext|tag` combination.
 
 ### Generating a Token
 
 Given a 256 bit ie. 32  byte secret `key` and an arbitrary `payload`, generate a
-token with the following steps, in order:
+token with the following steps in order:
 
 1. Generate a cryptocraphically secure `nonce`.
 2. If user has not provided `timestamp` use the current unixtime.
