@@ -76,12 +76,14 @@ The authentication tag is 128 bits ie. 16 bytes. This is the
 code. It is used to make sure that the payload, as well as the
 non-encrypted header has not been tampered with.
 
-NOTE! Some crypto libraries such as Libsodium offer [combined mode](https://download.libsodium.org/doc/secret-key_cryptography/ietf_Xchacha20-poly1305_construction.html)
-where the authentication tag and the encrypted message are stored together.
-You do not need to care about separating the tag from ciphertext.
-This is usually what you want to use.
+## Working With Tokens
 
-## Generating a Token
+Instructions below your crypto library supports combined mode. In combined mode,
+the authentication tag and the encrypted message are stored together. If your
+crypto library does not provide combined mode the `tag` is last 16 bytes of the
+`ciphertext|tag` combination.
+
+### Generating a Token
 
 Given a 256 bit ie. 32  byte secret `key` and an arbitrary `payload`, generate a
 token with the following steps, in order:
@@ -91,23 +93,23 @@ token with the following steps, in order:
 3. Construct the `header` by concatenating `version`, `timestamp` and `nonce`.
 4. Encrypt the user given payload with IETF XChaCha20-Poly1305 AEAD with user
    provided secret `key`. Use `header` as the additional data for AEAD.
-5. Concatenate `header` and returned `ciphertext` and `tag` from step 4 together.
+5. Concatenate the `header` and the returned `ciphertext|tag` combination from step 4.
 6. Base62 encode the entire token.
 
-## Verifying a Token
+### Verifying a Token
 
-Given a 256 bit ie. 32  byte secret `key` a `token`, to verify that the token is valid and recover the original unencrypted `payload`, perform the following steps, in order.
+Given a 256 bit ie. 32 byte secret `key` and a `token` to verify that the `token` is valid and recover the original unencrypted `payload`, perform the following steps, in order.
 
 1. Base62 decode the token.
-2. Ensure the first byte of the decoded token is `0xBA`.
+2. Make sure the first byte of the decoded token is `0xBA`.
 3. Extract the `header` ie. the first 29 bytes from the decoded token.
 4. Extract the `nonce` ie. the last 24 bytes from the `header`.
 5. Extract the `timestamp` ie. bytes 2 to 5 from the `header`.
 6. Extract `ciphertext|tag` combination ie. everything starting from byte 30.
-7. Optionally if you need separate `tag` extract the last 16 bytes from the `ciphertext|tag` combination from previous step. You don't need this if your crypto library supports combined mode, like libsodium.
-8. Decrypt and verify the with IETF XChaCha20-Poly1305 AEAD with user
-   provided secret `key`, `nonce` and optionally `tag`. Use `header` as the additional data for AEAD.
-9. Optionally if the user has specified a `ttl`, when verifying the token add the `ttl` to `timestamp` and compare this to current unixtime.
+7. Decrypt and verify the `ciphertext|tag` combination with IETF XChaCha20-Poly1305
+   AEAD using the secret `key` and  `nonce`. Use `header` as the additional data for
+   AEAD.
+8. Optionally if the user has specified a `ttl`, when verifying the token add the `ttl` to `timestamp` and compare this to current unixtime.
 
 ## Libraries
 
