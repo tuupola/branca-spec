@@ -115,10 +115,10 @@ Given a 256 bit ie. 32 byte secret `key` and a `token` to verify that the `token
 
 Currently known implementations in the wild.
 
-| Language | Author | Crypto library used |
-| -------- | ------ | -------------- |
-| [JavaScript](https://github.com/tuupola/branca-js) | [tuupola](https://github.com/tuupola) | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js)|
-| [PHP](https://github.com/tuupola/branca-php) | [tuupola](https://github.com/tuupola) | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
+| Language | License | Crypto library used | Author |
+| -------- | ------- | ------------------- | ------ |
+| [JavaScript](https://github.com/tuupola/branca-js) |  MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) | [tuupola](https://github.com/tuupola) |
+| [PHP](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) | [tuupola](https://github.com/tuupola) |
 
 ## Acceptance Test Vectors
 
