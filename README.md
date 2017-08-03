@@ -1,6 +1,6 @@
 # Branca Specification
 
-Authenticated Encrypted API Tokens (IETF XChaCha20-Poly1305).
+Authenticated Encrypted API Tokens (IETF XChaCha20-Poly1305 AEAD).
 
 ## What?
 
