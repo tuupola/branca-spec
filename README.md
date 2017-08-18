@@ -117,6 +117,7 @@ Currently known implementations in the wild.
 
 | Language | License | Crypto library used |
 | -------- | ------- | ------------------- |
+| [Elixir](https://github.com/tuupola/branca-elixir) |  MIT | [ArteMisc/libsalty](https://github.com/ArteMisc/libsalty) |
 | [JavaScript](https://github.com/tuupola/branca-js) |  MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
 | [PHP](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 
