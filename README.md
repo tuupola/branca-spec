@@ -11,7 +11,10 @@ based on [Fernet specification](https://github.com/fernet/spec/blob/master/Spec.
 
 Payload in Branca token is an arbitrary sequence of bytes. This means payload can
 be for example a JSON object, plain text string or even binary data serialized
-by [MessagePack](http://msgpack.org/) or [Protocol Buffers](https://developers.google.com/protocol-buffers/).
+by [MessagePack](http://msgpack.org/) or
+[Protocol Buffers](https://developers.google.com/protocol-buffers/). For
+examples on practical usage there is an article on how to use
+[Branca as an alternative to JWT](https://appelsiini.net/2017/branca-alternative-to-jwt/).
 
 ## Design Goals
 
