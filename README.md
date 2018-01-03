@@ -4,9 +4,9 @@ Authenticated and encrypted API tokens using modern crypto.
 
 ## What?
 
-Branca is asecure easy to use token format which makes it hard to shoot yourself in the foot. It uses IETF XChaCha20-Poly1305 AEAD symmetric encryption to create encrypted and tamperproof tokens. Payload itself is an arbitrary sequence of bytes. It can be for example a JSON object, plain text string or even binary data serialized by [MessagePack](http://msgpack.org/) or [Protocol Buffers](https://developers.google.com/protocol-buffers/).
+Branca is a secure easy to use token format which makes it hard to shoot yourself in the foot. It uses IETF XChaCha20-Poly1305 AEAD symmetric encryption to create encrypted and tamperproof tokens. Payload itself is an arbitrary sequence of bytes. You can use for example a JSON object, plain text string or even binary data serialized by [MessagePack](http://msgpack.org/) or [Protocol Buffers](https://developers.google.com/protocol-buffers/).
 
-You can easily use [Branca as an alternative to JWT](https://appelsiini.net/2017/branca-alternative-to-jwt/).
+It is possible to use [Branca as an alternative to JWT](https://appelsiini.net/2017/branca-alternative-to-jwt/).
 
 This specification defines the external format and encryption scheme of the token to help developers create their own implementations. Branca is closely based on [Fernet specification](https://github.com/fernet/spec/blob/master/Spec.md).
 
@@ -60,7 +60,7 @@ Instructions below assume your crypto library supports combined mode. In combine
 
 ### Generating a Token
 
-Given a 256 bit ie. 32  byte secret `key` and an arbitrary `payload`, generate a token with the following steps in order:
+Given a 256 bit ie. 32 byte secret `key` and an arbitrary `payload`, generate a token with the following steps in order:
 
 1. Generate a cryptocraphically secure `nonce`.
 2. If user has not provided `timestamp` use the current unixtime.
