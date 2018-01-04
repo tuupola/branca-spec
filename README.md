@@ -96,6 +96,11 @@ Currently known implementations in the wild.
 
 TODO... In the meanwhile see [JavaScript](https://github.com/tuupola/branca-js/blob/master/test.js) and [PHP](https://github.com/tuupola/branca-php/blob/master/tests/BrancaTest.php) example tests.
 
+## Similar Projects
+
+* [PAST](https://github.com/paragonie/past) ie. Platform-Agnostic Security Tokens.
+* [Fernet](https://github.com/fernet) which provides AES 128 in CBC mode tokens.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
