@@ -99,7 +99,7 @@ TODO... In the meanwhile see [JavaScript](https://github.com/tuupola/branca-js/b
 
 ## Similar Projects
 
-* [PAST](https://github.com/paragonie/past) ie. Platform-Agnostic Security Tokens.
+* [PASETO](https://github.com/paragonie/paseto) ie. Platform-Agnostic Security Tokens.
 * [Fernet](https://github.com/fernet) which provides AES 128 in CBC mode tokens.
 
 ## License
