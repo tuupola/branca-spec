@@ -6,7 +6,7 @@ Authenticated and encrypted API tokens using modern crypto.
 
 Branca is a secure easy to use token format which makes it hard to shoot yourself in the foot. It uses IETF XChaCha20-Poly1305 AEAD symmetric encryption to create encrypted and tamperproof tokens. Payload itself is an arbitrary sequence of bytes. You can use for example a JSON object, plain text string or even binary data serialized by [MessagePack](http://msgpack.org/) or [Protocol Buffers](https://developers.google.com/protocol-buffers/).
 
-It is possible to use [Branca as an alternative to JWT](https://appelsiini.net/2017/branca-alternative-to-jwt/).
+Although not a goal, it is possible to use [Branca as an alternative to JWT](https://appelsiini.net/2017/branca-alternative-to-jwt/). Also see [getting started](https://branca.io/) instructions.
 
 This specification defines the external format and encryption scheme of the token to help developers create their own implementations. Branca is closely based on [Fernet specification](https://github.com/fernet/spec/blob/master/Spec.md).
 
