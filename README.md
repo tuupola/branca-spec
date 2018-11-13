@@ -91,6 +91,7 @@ Currently known implementations in the wild.
 | [Elixir](https://github.com/tuupola/branca-elixir) |  MIT | [ArteMisc/libsalty](https://github.com/ArteMisc/libsalty) |
 | [Erlang](https://github.com/1ma/branca-erl) |  MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
 | [Go](https://github.com/hako/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
+| [Go](https://github.com/juranki/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | [JavaScript](https://github.com/tuupola/branca-js) |  MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
 | [PHP](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 | [Python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
