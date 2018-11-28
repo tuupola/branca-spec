@@ -95,6 +95,7 @@ Currently known implementations in the wild.
 | [JavaScript](https://github.com/tuupola/branca-js) |  MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
 | [PHP](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 | [Python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
+| [Rust](https://github.com/return/branca) | MIT | [sodiumoxide/sodiumoxide](https://github.com/sodiumoxide/sodiumoxide)
 ## Acceptance Test Vectors
 
 TODO... In the meanwhile see [JavaScript](https://github.com/tuupola/branca-js/blob/master/test.js) and [PHP](https://github.com/tuupola/branca-php/blob/master/tests/BrancaTest.php) example tests.
