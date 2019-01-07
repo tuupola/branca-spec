@@ -91,6 +91,7 @@ Currently known implementations in the wild.
 | -------- | ---------- | ------- | ------------------- |
 | Elixir | [tuupola/branca-elixir](https://github.com/tuupola/branca-elixir) |  MIT | [ArteMisc/libsalty](https://github.com/ArteMisc/libsalty) |
 | Erlang | [1ma/branca-erl](https://github.com/1ma/branca-erl) |  MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
+| Go | [essentialkaos/branca](https://github.com/essentialkaos/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | Go | [hako/branca](https://github.com/hako/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | Go | [juranki/branca](https://github.com/juranki/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | JavaScript | [tuupola/branca-js](https://github.com/tuupola/branca-js) |  MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
