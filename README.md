@@ -83,7 +83,7 @@ Given a 256 bit ie. 32 byte secret `key` and a `token` to verify that the `token
 
 ### Working With the Timestamp
 
-Optionally the implementing library may also use the `timestamp` for additional verification. For example the library might provide a `ttl` parameter which is used to check if token is expired by adding the `ttl` to `timestamp` and comparing the result to the current unixtime.
+Optionally the implementing library may use the `timestamp` for additional verification. For example the library might provide a `ttl` parameter which is used to check if token is expired by adding the `ttl` to `timestamp` and comparing the result to the current unixtime.
 
 ## Libraries
 
