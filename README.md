@@ -65,7 +65,7 @@ Given a 256 bit ie. 32 byte secret `key` and an arbitrary `payload`, generate a 
 1. Generate a cryptocraphically secure `nonce`.
 2. If user has not provided `timestamp` use the current unixtime.
 3. Construct the `header` by concatenating `version`, `timestamp` and `nonce`.
-4. Encrypt the user given payload with IETF XChaCha20-Poly1305 AEAD with user    provided secret `key`. Use `header` as the additional data for AEAD.
+4. Encrypt the user given payload with IETF XChaCha20-Poly1305 AEAD with user provided secret `key`. Use `header` as the additional data for AEAD.
 5. Concatenate the `header` and the returned `ciphertext|tag` combination from step 4.
 6. Base62 encode the entire token.
 
@@ -79,7 +79,7 @@ Given a 256 bit ie. 32 byte secret `key` and a `token` to verify that the `token
 4. Extract the `nonce` ie. the last 24 bytes from the `header`.
 5. Extract the `timestamp` ie. bytes 2 to 5 from the `header`.
 6. Extract `ciphertext|tag` combination ie. everything starting from byte 30.
-7. Decrypt and verify the `ciphertext|tag` combination with IETF XChaCha20-Poly1305    AEAD using the secret `key` and  `nonce`. Use `header` as the additional data for    AEAD.
+7. Decrypt and verify the `ciphertext|tag` combination with IETF XChaCha20-Poly1305 AEAD using the secret `key` and `nonce`. Use `header` as the additional data for AEAD.
 8. Optionally if the user has specified a `ttl`, when verifying the token add the `ttl` to `timestamp` and compare this to current unixtime.
 
 ## Libraries
@@ -89,12 +89,12 @@ Currently known implementations in the wild.
 
 | Language | Repository | License | Crypto library used |
 | -------- | ---------- | ------- | ------------------- |
-| Elixir | [tuupola/branca-elixir](https://github.com/tuupola/branca-elixir) |  MIT | [ArteMisc/libsalty](https://github.com/ArteMisc/libsalty) |
-| Erlang | [1ma/branca-erl](https://github.com/1ma/branca-erl) |  MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
+| Elixir | [tuupola/branca-elixir](https://github.com/tuupola/branca-elixir) | MIT | [ArteMisc/libsalty](https://github.com/ArteMisc/libsalty) |
+| Erlang | [1ma/branca-erl](https://github.com/1ma/branca-erl) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
 | Go | [essentialkaos/branca](https://github.com/essentialkaos/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | Go | [hako/branca](https://github.com/hako/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | Go | [juranki/branca](https://github.com/juranki/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
-| JavaScript | [tuupola/branca-js](https://github.com/tuupola/branca-js) |  MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
+| JavaScript | [tuupola/branca-js](https://github.com/tuupola/branca-js) | MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
 | PHP | [tuupola/branca-php](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 | Python | [tuupola/branca-python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
 | Rust | [return/branca](https://github.com/return/branca) | MIT | [cesarb/chacha20-poly1305-aead](https://github.com/cesarb/chacha20-poly1305-aead)
