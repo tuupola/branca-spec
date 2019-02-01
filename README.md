@@ -80,7 +80,10 @@ Given a 256 bit ie. 32 byte secret `key` and a `token` to verify that the `token
 5. Extract the `timestamp` ie. bytes 2 to 5 from the `header`.
 6. Extract `ciphertext|tag` combination ie. everything starting from byte 30.
 7. Decrypt and verify the `ciphertext|tag` combination with IETF XChaCha20-Poly1305 AEAD using the secret `key` and `nonce`. Use `header` as the additional data for AEAD.
-8. Optionally if the user has specified a `ttl`, when verifying the token add the `ttl` to `timestamp` and compare this to current unixtime.
+
+### Working With the Timestamp
+
+Optionally the implementing library may also use the `timestamp` for additional verification. For example the library might provide a `ttl` parameter which is used to check if token is expired by adding the `ttl` to `timestamp` and comparing the result to the current unixtime.
 
 ## Libraries
 
