@@ -43,7 +43,7 @@ Storing timestamp as unsigned integer allows us to avoid 2038 problem. Unsigned 
 
 ### Nonce
 
-Nonce is 192 bits ie. 24 bytes. These should be cryptographically secure random bytes and never reused between tokens.
+Nonce is 192 bits ie. 24 bytes. It should be cryptographically secure random bytes and never reused between tokens. Nonce should be generated automatically by the implementing library. Allowing end user to provide their own nonce is a foot gun.
 
 ### Ciphertext
 
