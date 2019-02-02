@@ -39,7 +39,7 @@ Version is 8 bits ie. one byte. Currently the only version is `0xBA`. This is a 
 
 Timestamp is 32 bits ie. unsigned big endian 4 byte UNIX timestamp. By having a timestamp instead of expiration time enables the consuming side to decide how long tokens are valid. You cannot accidentaly create tokens which are valid for the next 10 years.
 
-Storing timestamp as unsigned integer allows us to avoid 2038 problem. Unsigned integer overflow will happen in year 2106.
+Storing timestamp as unsigned integer allows us to avoid 2038 problem. Unsigned integer overflow will happen in the year 2106. Possible values are 0 - 4294967295.
 
 ### Nonce
 
