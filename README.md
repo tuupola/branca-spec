@@ -37,7 +37,7 @@ Version is 8 bits ie. one byte. Currently the only version is `0xBA`. This is a 
 
 ### Timestamp
 
-Timestamp is 32 bits ie. unsigned big endian 4 byte UNIX timestamp. By having a timestamp instead of expiration time enables the consuming side to decide how long tokens are valid. You cannot accidentaly create tokens which are valid for the next 10 years.
+Timestamp is 32 bits ie. unsigned big endian 4 byte UNIX timestamp. By having a timestamp instead of expiration time enables the consuming side to decide how long tokens are valid. You cannot accidentally create tokens which are valid for the next 10 years.
 
 Storing timestamp as unsigned integer allows us to avoid 2038 problem. Unsigned integer overflow will happen in the year 2106. Possible values are 0 - 4294967295.
 
@@ -108,7 +108,7 @@ Currently known implementations in the wild.
 | JavaScript | [tuupola/branca-js](https://github.com/tuupola/branca-js) | MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
 | PHP | [tuupola/branca-php](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 | Python | [tuupola/branca-python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
-| Rust | [return/branca](https://github.com/return/branca) | MIT | [cesarb/chacha20-poly1305-aead](https://github.com/cesarb/chacha20-poly1305-aead)
+| Rust | [return/branca](https://github.com/return/branca) | MIT | [brycx/orion](https://github.com/brycx/orion)
 
 ## Acceptance Test Vectors
 
