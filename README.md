@@ -111,6 +111,7 @@ Currently known implementations in the wild.
 | Kotlin | [petersamokhin/kbranca](https://github.com/petersamokhin/kbranca) | MIT | [Bouncy Castle](https://www.bouncycastle.org/java.html) |
 | PHP | [tuupola/branca-php](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 | Python | [tuupola/branca-python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
+| Ruby | [crossoverhealth/branca](https://github.com/crossoverhealth/branca) | MIT | [RubyCrypto/rbnacl](https://github.com/RubyCrypto/rbnacl)
 | Rust | [return/branca](https://github.com/return/branca) | MIT | [brycx/orion](https://github.com/brycx/orion)
 
 ## Acceptance Test Vectors
