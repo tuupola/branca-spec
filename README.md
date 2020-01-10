@@ -107,6 +107,7 @@ Currently known implementations in the wild.
 | Go | [juranki/branca](https://github.com/juranki/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | Java | [Kowalski-IO/branca](https://github.com/Kowalski-IO/branca) | MIT | [Bouncy Castle](https://www.bouncycastle.org/java.html) |
 | JavaScript | [tuupola/branca-js](https://github.com/tuupola/branca-js) | MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
+| Kotlin | [petersamokhin/kbranca](https://github.com/petersamokhin/kbranca) | MIT | [Bouncy Castle](https://www.bouncycastle.org/java.html) |
 | PHP | [tuupola/branca-php](https://github.com/tuupola/branca-php) | MIT | [paragonie/sodium_compat](https://github.com/paragonie/sodium_compat) |
 | Python | [tuupola/branca-python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
 | Rust | [return/branca](https://github.com/return/branca) | MIT | [brycx/orion](https://github.com/brycx/orion)
