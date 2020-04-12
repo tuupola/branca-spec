@@ -28,7 +28,7 @@ String representation of the above binary token must use base62 encoding with th
 
 
 ```
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy
+0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 ```
 
 ### Version
