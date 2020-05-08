@@ -102,6 +102,7 @@ Currently known implementations in the wild.
 | -------- | ---------- | ------- | ------------------- |
 | Elixir | [tuupola/branca-elixir](https://github.com/tuupola/branca-elixir) | MIT | [ArteMisc/libsalty](https://github.com/ArteMisc/libsalty) |
 | DotNet | [thangchung/branca-dotnet](https://github.com/thangchung/branca-dotnet) | MIT | [NaCl.Core](https://github.com/idaviddesmet/NaCl.Core) |
+| DotNet | [scottbrady91/IdentityModel](https://github.com/scottbrady91/IdentityModel) | Apache-2.0 | [Bouncy Castle](https://www.bouncycastle.org/csharp/index.html) |
 | Erlang | [1ma/branca-erl](https://github.com/1ma/branca-erl) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
 | Go | [essentialkaos/branca](https://github.com/essentialkaos/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
 | Go | [hako/branca](https://github.com/hako/branca) | MIT | [golang/crypto](https://github.com/golang/crypto)
