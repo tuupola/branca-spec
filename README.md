@@ -55,7 +55,7 @@ $nonce = sodium_crypto_generichash($payload, $random, $size);
 
 ### Ciphertext
 
-Payload is encrypted and authenticated using [IETF XChaCha20-Poly1305](https://download.libsodium.org/doc/secret-key_cryptography/xchacha20-poly1305_construction.html). Note that this is [Authenticated Encryption with Additional Data (AEAD)](https://tools.ietf.org/html/rfc7539#section-2.8) where the he header part of the token is the additional data. This means the data in the header (version, timestamp and nonce) is not encrypted, it is only authenticated. In laymans terms, header can be seen but it cannot be tampered.
+Payload is encrypted and authenticated using [IETF XChaCha20-Poly1305](https://download.libsodium.org/doc/secret-key_cryptography/xchacha20-poly1305_construction.html). Note that this is [Authenticated Encryption with Additional Data (AEAD)](https://tools.ietf.org/html/rfc7539#section-2.8) where the header part of the token is the additional data. This means the data in the header (version, timestamp and nonce) is not encrypted, it is only authenticated. In laymans terms, header can be seen but it cannot be tampered.
 
 ### Tag
 
