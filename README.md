@@ -100,6 +100,7 @@ Currently known implementations in the wild.
 
 | Language | Repository | License | Crypto library used |
 | -------- | ---------- | ------- | ------------------- |
+| Clojure | [miikka/clj-branca](https://sr.ht/~miikka/clj-branca/) | EPL-2.0 | [terl/lazysodium-java](https://github.com/terl/lazysodium-java) |
 | Elixir | [tuupola/branca-elixir](https://github.com/tuupola/branca-elixir) | MIT | [ArteMisc/libsalty](https://github.com/ArteMisc/libsalty) |
 | DotNet | [thangchung/branca-dotnet](https://github.com/thangchung/branca-dotnet) | MIT | [NaCl.Core](https://github.com/idaviddesmet/NaCl.Core) |
 | Erlang | [1ma/branca-erl](https://github.com/1ma/branca-erl) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
