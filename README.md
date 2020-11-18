@@ -112,7 +112,7 @@ Currently known implementations in the wild.
 
 ## Acceptance Test Vectors
 
-TODO... In the meanwhile see [JavaScript](https://github.com/tuupola/branca-js/blob/master/test.js) and [PHP](https://github.com/tuupola/branca-php/blob/master/tests/BrancaTest.php) example tests.
+All test vectors can be found [here](https://github.com/tuupola/branca-spec/blob/master/test_vectors.json).
 
 ## Similar Projects
 
