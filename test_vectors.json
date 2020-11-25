@@ -92,7 +92,7 @@
     },
     {
       "test_vector_id": 9,
-      "comment": "Invalid key.",
+      "comment": "Invalid key - one bytes less than required.",
       "key": "supersecretkeyyoushouldnotcommi",
       "nonce": "08575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
       "timestamp": 123206400,
@@ -102,7 +102,7 @@
     },
     {
       "test_vector_id": 10,
-      "comment": "Invalid nonce.",
+      "comment": "Invalid nonce - one bytes less than required.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "3031323334353637383930313233343536373839303132",
       "timestamp": 123206400,
@@ -112,7 +112,7 @@
     },
     {
       "test_vector_id": 11,
-      "comment": "Wrong key.",
+      "comment": "Wrong key - different key was used to create token.",
       "key": "sspersecretkeyyoushouldnotcommit",
       "nonce": "08575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
       "timestamp": 123206400,
@@ -122,7 +122,7 @@
     },
     {
       "test_vector_id": 12,
-      "comment": "Wrong nonce.",
+      "comment": "Wrong nonce - different nonce was used to create token.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "18575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
       "timestamp": 123206400,
