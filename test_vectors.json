@@ -71,17 +71,6 @@
     },
     {
       "test_vector_id": 7,
-      "comment": "TTL expired.",
-      "key": "supersecretkeyyoushouldnotcommit",
-      "nonce": "303132333435363738393031323334353637383930313233",
-      "timestamp": 123206400,
-      "ttl": 5,
-      "token": "875GH23A3oU9rzGcASWMHy9g9wYoUCZKlI453M7WR3zjo0voZv5bs46OwLZzYdeh8P5veXG14iXpk",
-      "msg": "48656c6c6f20776f726c6421",
-      "is_valid": false
-    },
-    {
-      "test_vector_id": 8,
       "comment": "Invalid base62.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "08575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
@@ -91,7 +80,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 9,
+      "test_vector_id": 8,
       "comment": "Invalid key - one bytes less than required.",
       "key": "supersecretkeyyoushouldnotcommi",
       "nonce": "08575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
@@ -101,7 +90,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 10,
+      "test_vector_id": 9,
       "comment": "Invalid nonce - one bytes less than required.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "3031323334353637383930313233343536373839303132",
@@ -111,7 +100,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 11,
+      "test_vector_id": 10,
       "comment": "Wrong key - different key was used to create token.",
       "key": "sspersecretkeyyoushouldnotcommit",
       "nonce": "08575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
@@ -121,17 +110,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 12,
-      "comment": "Wrong nonce - different nonce was used to create token.",
-      "key": "supersecretkeyyoushouldnotcommit",
-      "nonce": "18575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
-      "timestamp": 123206400,
-      "token": "875GH234UdXU6PkYq8g7tIM80XapDQOH72bU48YJ7SK1iHiLkrqT8Mly7P59TebOxCyQeqpMJ0a7a",
-      "msg": "48656c6c6f20776f726c6421",
-      "is_valid": false
-    },
-    {
-      "test_vector_id": 13,
+      "test_vector_id": 11,
       "comment": "Modified version.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "303132333435363738393031323334353637383930313233",
@@ -141,7 +120,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 14,
+      "test_vector_id": 12,
       "comment": "Modified first byte of the nonce.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "303132333435363738393031323334353637383930313233",
@@ -151,7 +130,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 15,
+      "test_vector_id": 13,
       "comment": "Modified first byte of the timestamp.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "303132333435363738393031323334353637383930313233",
@@ -161,7 +140,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 16,
+      "test_vector_id": 14,
       "comment": "Modified last byte of the ciphertext.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "303132333435363738393031323334353637383930313233",
@@ -171,7 +150,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 17,
+      "test_vector_id": 15,
       "comment": "Modified last byte of the Poly1305 tag.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "303132333435363738393031323334353637383930313233",
@@ -181,7 +160,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 18,
+      "test_vector_id": 16,
       "comment": "Overflowing timestamp ('Possible values are 0 - 4294967295.')",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "303132333435363738393031323334353637383930313233",
@@ -192,7 +171,7 @@
       "is_valid": false
     },
     {
-      "test_vector_id": 19,
+      "test_vector_id": 17,
       "comment": "Empty input message is correct.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "788d362c0e8c089c76e49c8626482b26182cb4b000a4848f",
@@ -202,7 +181,7 @@
       "is_valid": true
     },
     {
-      "test_vector_id": 20,
+      "test_vector_id": 18,
       "comment": "Non-utf8 is correct.",
       "key": "supersecretkeyyoushouldnotcommit",
       "nonce": "98a0400b30903cab1acaeff04120ce451af4c2c427356947",
