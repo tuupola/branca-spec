@@ -133,7 +133,7 @@
           "comment": "Invalid base62.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 123206400,
-          "token": "875GH234UdXU6PkYq8g7tIM80XapDQOH72bU48YJ7SK1iHiLkrqT8Mly7P59TebOxCyQeqpMJ0a7a_",
+          "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5QwcEqLDRnTDHPenOX7nP2trlT_",
           "msg": "48656c6c6f20776f726c6421",
           "is_valid": false
         },
@@ -161,7 +161,7 @@
           "comment": "Modified first byte of the nonce.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
-          "token": "870S4BYdsXae27KUqsEj2Zmwaoqlts5CLney7GEE37YDaESzC1xxUiP6yLQYwLgQqB4sGrZcNG9BM",
+          "token": "875GH233SUysT7fQ711EWd9BXpwOjB72ng3ZLnjWFrmOqVy49Bv93b78JU5331LbcY0EEzhLfpmSx",
           "msg": "48656c6c6f20776f726c6421",
           "is_valid": false
         },
@@ -170,7 +170,7 @@
           "comment": "Modified first byte of the timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
-          "token": "8716fqFbRW2daVCiWDQNOSKmSaTBWtqaztqc00GEMS3oLAOvVpwaDMVgUUy985OovmznIB4INccPk",
+          "token": "870g1RCk4lW1YInhaU3TP8u2hGtfol16ettLcTOSoA0JIpjCaQRW7tQeP6dQmTvFIB2s6wL5deMXr",
           "msg": "48656c6c6f20776f726c6421",
           "is_valid": false
         },
@@ -179,7 +179,7 @@
           "comment": "Modified last byte of the ciphertext.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
-          "token": "870S4BYdjsZ3PVQVaYyLOTnlVf5Zz7k6dxqmA9ps2C5UVEVvtqUMJUuTUgZ4ZsGlWfHqa9V4mBqL6",
+          "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5Qw6Jpo96myliI3hHD7VbKZBYh",
           "msg": "48656c6c6f20776f726c6421",
           "is_valid": false
         },
@@ -188,7 +188,7 @@
           "comment": "Modified last byte of the Poly1305 tag.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
-          "token": "870S4BYdjsZ3PVQVaYyLOTnlVf5Zz7k6dxqmA9ps2C5UVEVvtqUMJUubHkbHqEMFCR20NIHxtRXxF",
+          "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5QwcEqLDRnTDHPenOX7nP2trk0",
           "msg": "48656c6c6f20776f726c6421",
           "is_valid": false
         }
