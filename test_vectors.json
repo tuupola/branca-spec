@@ -26,16 +26,6 @@
         },
         {
           "test_vector_id": 2,
-          "comment": "Invalid key - one bytes less than required.",
-          "key": "supersecretkeyyoushouldnotcommi",
-          "nonce": "08575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
-          "timestamp": 123206400,
-          "token": "875GH234UdXU6PkYq8g7tIM80XapDQOH72bU48YJ7SK1iHiLkrqT8Mly7P59TebOxCyQeqpMJ0a7a",
-          "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
-        },
-        {
-          "test_vector_id": 3,
           "comment": "Invalid nonce (NOTE: token is invalid as well).",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": "dead",
@@ -45,17 +35,7 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 4,
-          "comment": "Wrong key - different key was used to create token.",
-          "key": "sspersecretkeyyoushouldnotcommit",
-          "nonce": "08575ec30b80c407610e4573c2e54a1147a14001fa01f96d",
-          "timestamp": 123206400,
-          "token": "875GH234UdXU6PkYq8g7tIM80XapDQOH72bU48YJ7SK1iHiLkrqT8Mly7P59TebOxCyQeqpMJ0a7a",
-          "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
-        },
-        {
-          "test_vector_id": 5,
+          "test_vector_id": 3,
           "comment": "Zero timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": "beefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeef",
@@ -65,7 +45,7 @@
           "is_valid": true
         },
         {
-          "test_vector_id": 6,
+          "test_vector_id": 4,
           "comment": "Max timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": "beefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeef",
@@ -75,7 +55,7 @@
           "is_valid": true
         },
         {
-          "test_vector_id": 7,
+          "test_vector_id": 5,
           "comment": "November 27th timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": "beefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeef",
@@ -85,7 +65,7 @@
           "is_valid": true
         },
         {
-          "test_vector_id": 8,
+          "test_vector_id": 6,
           "comment": "Eight null bytes with zero timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": "beefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeef",
@@ -95,7 +75,7 @@
           "is_valid": true
         },
         {
-          "test_vector_id": 9,
+          "test_vector_id": 7,
           "comment": "Eight null bytes with max timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": "beefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeef",
@@ -105,7 +85,7 @@
           "is_valid": true
         },
         {
-          "test_vector_id": 10,
+          "test_vector_id": 8,
           "comment": "Eight null bytes with november 27th timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": "beefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeefbeef",
@@ -120,7 +100,7 @@
       "type": "decoding",
       "tests": [
         {
-          "test_vector_id": 11,
+          "test_vector_id": 9,
           "comment": "Wrong version - this token was created with version 0xBB.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
@@ -129,7 +109,7 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 12,
+          "test_vector_id": 10,
           "comment": "Invalid base62.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 123206400,
@@ -138,7 +118,7 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 13,
+          "test_vector_id": 11,
           "comment": "Modified version after token creation.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
@@ -147,7 +127,7 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 14,
+          "test_vector_id": 12,
           "comment": "Overflowing timestamp ('Possible values are 0 - 4294967295.')",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 4294967295,
@@ -157,7 +137,7 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 15,
+          "test_vector_id": 13,
           "comment": "Modified first byte of the nonce.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
@@ -166,7 +146,7 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 16,
+          "test_vector_id": 14,
           "comment": "Modified first byte of the timestamp.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
@@ -175,7 +155,7 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 17,
+          "test_vector_id": 15,
           "comment": "Modified last byte of the ciphertext.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
@@ -184,11 +164,29 @@
           "is_valid": false
         },
         {
-          "test_vector_id": 18,
+          "test_vector_id": 16,
           "comment": "Modified last byte of the Poly1305 tag.",
           "key": "supersecretkeyyoushouldnotcommit",
           "timestamp": 0,
           "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5QwcEqLDRnTDHPenOX7nP2trk0",
+          "msg": "48656c6c6f20776f726c6421",
+          "is_valid": false
+        },
+        {
+          "test_vector_id": 17,
+          "comment": "Wrong key - different key was used to create token.",
+          "key": "wrongsecretkeyyoushouldnotcommit",
+          "timestamp": 0,
+          "token": "870S4BYxgHw0KnP3W9fgVUHEhT5g86vJ17etaC5Kh5uIraWHCI1psNQGv298ZmjPwoYbjDQ9chy2z",
+          "msg": "48656c6c6f20776f726c6421",
+          "is_valid": false
+        },
+        {
+          "test_vector_id": 18,
+          "comment": "Invalid key - one bytes less than required.",
+          "key": "tooshortkey",
+          "timestamp": 0,
+          "token": "870S4BYxgHw0KnP3W9fgVUHEhT5g86vJ17etaC5Kh5uIraWHCI1psNQGv298ZmjPwoYbjDQ9chy2z",
           "msg": "48656c6c6f20776f726c6421",
           "is_valid": false
         }
