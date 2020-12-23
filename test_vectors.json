@@ -13,7 +13,7 @@
           "timestamp": 123206400,
           "token": "K9u6d0zjXp8RXNUGDyXAsB9AtPo60CD3xxQ2ulL8aQoTzXbvockRff0y1eXoHm",
           "msg": "80",
-          "is_valid": true
+          "isValid": true
         },
         {
           "id": 1,
@@ -23,7 +23,7 @@
           "timestamp": 0,
           "token": "4sfD0vPFhIif8cy4nB3BQkHeJqkOkDvinI4zIhMjYX4YXZU5WIq9ycCVjGzB5",
           "msg": "",
-          "is_valid": true
+          "isValid": true
         },
         {
           "id": 2,
@@ -33,7 +33,7 @@
           "timestamp": 0,
           "token": "870S4BYkkjLle9LOsVbkF2iLHt55PcPSXBDnBTVyXdIZ8OHTMtya7FA29IITW1bYphyllRWGmsGIg",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 3,
@@ -43,7 +43,7 @@
           "timestamp": 0,
           "token": "870S4BYxgHw0KnP3W9fgVUHEhT5g86vJ17etaC5Kh5uIraWHCI1psNQGv298ZmjPwoYbjDQ9chy2z",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": true
+          "isValid": true
         },
         {
           "id": 4,
@@ -53,7 +53,7 @@
           "timestamp": 4294967295,
           "token": "89i7YCwu5tWAJNHUDdmIqhzOi5hVHOd4afjZcGMcVmM4enl4yeLiDyYv41eMkNmTX6IwYEFErCSqr",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": true
+          "isValid": true
         },
         {
           "id": 5,
@@ -63,7 +63,7 @@
           "timestamp": 123206400,
           "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5QwcEqLDRnTDHPenOX7nP2trlT",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": true
+          "isValid": true
         },
         {
           "id": 6,
@@ -73,7 +73,7 @@
           "timestamp": 0,
           "token": "1jIBheHbDdkCDFQmtgw4RUZeQoOJgGwTFJSpwOAk3XYpJJr52DEpILLmmwYl4tjdSbbNqcF1",
           "msg": "0000000000000000",
-          "is_valid": true
+          "isValid": true
         },
         {
           "id": 7,
@@ -83,7 +83,7 @@
           "timestamp": 4294967295,
           "token": "1jrx6DUu5q06oxykef2e2ZMyTcDRTQot9ZnwgifUtzAphGtjsxfbxXNhQyBEOGtpbkBgvIQx",
           "msg": "0000000000000000",
-          "is_valid": true
+          "isValid": true
         },
         {
           "id": 8,
@@ -93,7 +93,7 @@
           "timestamp": 123206400,
           "token": "1jJDJOEjuwVb9Csz1Ypw1KBWSkr0YDpeBeJN6NzJWx1VgPLmcBhu2SbkpQ9JjZ3nfUf7Aytp",
           "msg": "0000000000000000",
-          "is_valid": true
+          "isValid": true
         }
       ]
     },
@@ -108,7 +108,7 @@
           "timestamp": 0,
           "token": "89mvl3RkwXjpEj5WMxK7GUDEHEeeeZtwjMIOogTthvr44qBfYtQSIZH5MHOTC0GzoutDIeoPVZk3w",
           "msg": "",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 10,
@@ -118,7 +118,7 @@
           "timestamp": 123206400,
           "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5QwcEqLDRnTDHPenOX7nP2trlT_",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 11,
@@ -128,7 +128,7 @@
           "timestamp": 0,
           "token": "89i7YCx9usiQoaTtdaibIQ7goaYbRkXRDRAoEcg3g99OwFaKlb1kyo25vCzJZEzmT7tzFTqYV9xhM",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 12,
@@ -138,7 +138,7 @@
           "timestamp": 0,
           "token": "875GH233SUysT7fQ711EWd9BXpwOjB72ng3ZLnjWFrmOqVy49Bv93b78JU5331LbcY0EEzhLfpmSx",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 13,
@@ -148,7 +148,7 @@
           "timestamp": 0,
           "token": "870g1RCk4lW1YInhaU3TP8u2hGtfol16ettLcTOSoA0JIpjCaQRW7tQeP6dQmTvFIB2s6wL5deMXr",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 14,
@@ -158,7 +158,7 @@
           "timestamp": 0,
           "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5Qw6Jpo96myliI3hHD7VbKZBYh",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 15,
@@ -168,7 +168,7 @@
           "timestamp": 0,
           "token": "875GH23U0Dr6nHFA63DhOyd9LkYudBkX8RsCTOMz5xoYAMw9sMd5QwcEqLDRnTDHPenOX7nP2trk0",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 16,
@@ -178,7 +178,7 @@
           "timestamp": 0,
           "token": "870S4BYxgHw0KnP3W9fgVUHEhT5g86vJ17etaC5Kh5uIraWHCI1psNQGv298ZmjPwoYbjDQ9chy2z",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         },
         {
           "id": 17,
@@ -188,7 +188,7 @@
           "timestamp": 0,
           "token": "870S4BYxgHw0KnP3W9fgVUHEhT5g86vJ17etaC5Kh5uIraWHCI1psNQGv298ZmjPwoYbjDQ9chy2z",
           "msg": "48656c6c6f20776f726c6421",
-          "is_valid": false
+          "isValid": false
         }
       ]
     } 
