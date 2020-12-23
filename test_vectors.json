@@ -3,7 +3,7 @@
   "numberOfTests": 18,
   "testGroups": [
     {
-      "testType": "encoding and decoding",
+      "testType": "encoding",
       "tests": [
         {
           "id": 0,
