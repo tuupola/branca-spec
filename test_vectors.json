@@ -1,6 +1,6 @@
 {
   "version": "0.2.0",
-  "numberOfTests": 26,
+  "numberOfTests": 25,
   "testGroups": [
     {
       "testType": "encoding",
@@ -84,16 +84,6 @@
           "token": "K9u6d0zjXp8RXNUGDyXAsB9AtPo60CD3xxQ2ulL8aQoTzXbvockRff0y1eXoHm",
           "msg": "80",
           "isValid": true
-        },
-        {
-          "id": 8,
-          "comment": "Invalid nonce (ignore this test if not possible to set nonce)",
-          "key": "supersecretkeyyoushouldnotcommit",
-          "nonce": "dead",
-          "timestamp": 0,
-          "token": null,
-          "msg": "48656c6c6f20776f726c6421",
-          "isValid": false
         }
       ]
     },
@@ -101,7 +91,7 @@
       "testType": "decoding",
       "tests": [
         {
-          "id": 9,
+          "id": 8,
           "comment": "Hello world with zero timestamp",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -111,7 +101,7 @@
           "isValid": true
         },
         {
-          "id": 10,
+          "id": 9,
           "comment": "Hello world with max timestamp",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -121,7 +111,7 @@
           "isValid": true
         },
         {
-          "id": 11,
+          "id": 10,
           "comment": "Hello world with November 27 timestamp",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -131,7 +121,7 @@
           "isValid": true
         },
         {
-          "id": 12,
+          "id": 11,
           "comment": "Eight null bytes with zero timestamp",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -141,7 +131,7 @@
           "isValid": true
         },
         {
-          "id": 13,
+          "id": 12,
           "comment": "Eight null bytes with max timestamp",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -151,7 +141,7 @@
           "isValid": true
         },
         {
-          "id": 14,
+          "id": 13,
           "comment": "Eight null bytes with November 27th timestamp",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -161,7 +151,7 @@
           "isValid": true
         },
         {
-          "id": 15,
+          "id": 14,
           "comment": "Empty payload",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -171,7 +161,7 @@
           "isValid": true
         },
         {
-          "id": 16,
+          "id": 15,
           "comment": "Non-UTF8 payload",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -181,7 +171,7 @@
           "isValid": true
         },
         {
-          "id": 17,
+          "id": 16,
           "comment": "Wrong version 0xBB",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -191,7 +181,7 @@
           "isValid": false
         },
         {
-          "id": 18,
+          "id": 17,
           "comment": "Invalid base62 characters",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -201,7 +191,7 @@
           "isValid": false
         },
         {
-          "id": 19,
+          "id": 18,
           "comment": "Modified version",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -211,7 +201,7 @@
           "isValid": false
         },
         {
-          "id": 20,
+          "id": 19,
           "comment": "Modified first byte of the nonce",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -222,7 +212,7 @@
         },
 
         {
-          "id": 21,
+          "id": 20,
           "comment": "Modified timestamp",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -233,7 +223,7 @@
         },
 
         {
-          "id": 22,
+          "id": 21,
           "comment": "Modified last byte of the ciphertext",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -243,7 +233,7 @@
           "isValid": false
         },
         {
-          "id": 23,
+          "id": 22,
           "comment": "Modified last byte of the Poly1305 tag",
           "key": "supersecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -253,7 +243,7 @@
           "isValid": false
         },
         {
-          "id": 24,
+          "id": 23,
           "comment": "Wrong key",
           "key": "wrongsecretkeyyoushouldnotcommit",
           "nonce": null,
@@ -263,7 +253,7 @@
           "isValid": false
         },
         {
-          "id": 25,
+          "id": 24,
           "comment": "Invalid key",
           "key": "tooshortkey",
           "nonce": null,
