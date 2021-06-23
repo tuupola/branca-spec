@@ -41,6 +41,12 @@ Timestamp is 32 bits ie. unsigned big endian 4 byte UNIX timestamp. By having a 
 
 Storing timestamp as unsigned integer allows us to avoid 2038 problem. Unsigned integer overflow will happen in the year 2106. Possible values are 0 - 4294967295.
 
+### Key
+
+This is a symmetric key of 32 arbitrary bytes. The key can be randomly generated using a CSPRNG, derived from a user-password using a password-hashing algorithm such as Argon2, or created during a key-exchange.
+
+It is the responsibility of the user of Branca, to ensure the strength and confidentiality of the secret key used. See [libsodium](https://libsodium.gitbook.io/doc/quickstart#what-is-the-difference-between-a-secret-key-and-a-password) for more information on the difference between a password and a secret key.
+
 ### Nonce
 
 Nonce is 192 bits ie. 24 bytes. It should be cryptographically secure random bytes. A nonce should never be used more than once with the same secret key between different payloads. It should be generated automatically by the implementing library. Allowing end user to provide their own nonce is a foot gun.
