@@ -97,9 +97,20 @@ Optionally the implementing library may use the `timestamp` for additional verif
 
 ## Libraries
 
-Currently known implementations in the wild.
+**Disclaimer:** This list does not guarantee security nor correctness of the libraries mentioned. The list is not guaranteed to be updated either. A user is encouraged to vet any library before using it.
+
+The libraries listed in this section are known implementations of the Branca specification. 
 
 
+**Implementations that do, or previously have, complied with the specification**
+| Language | Repository | License | Crypto library used |
+| -------- | ---------- | ------- | ------------------- |
+| JavaScript | [tuupola/branca-js](https://github.com/tuupola/branca-js) | MIT | [jedisct1/libsodium.js](https://github.com/jedisct1/libsodium.js) |
+| PHP | [tuupola/branca-php](https://github.com/tuupola/branca-php) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
+| Python | [tuupola/branca-python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
+| Rust | [return/branca](https://github.com/return/branca) | MIT | [orion-rs/orion](https://github.com/orion-rs/orion)
+
+**All currently known implementations in the wild**
 | Language | Repository | License | Crypto library used |
 | -------- | ---------- | ------- | ------------------- |
 | Clojure | [miikka/clj-branca](https://sr.ht/~miikka/clj-branca/) | EPL-2.0 | [terl/lazysodium-java](https://github.com/terl/lazysodium-java) |
@@ -118,7 +129,7 @@ Currently known implementations in the wild.
 | Python | [tuupola/branca-python](https://github.com/tuupola/branca-python) | MIT | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
 | Ruby | [thadeu/branca-ruby](https://github.com/thadeu/branca-ruby) | MIT | [RubyCrypto/rbnacl](https://github.com/RubyCrypto/rbnacl)
 | Ruby | [crossoverhealth/branca](https://github.com/crossoverhealth/branca) | MIT | [RubyCrypto/rbnacl](https://github.com/RubyCrypto/rbnacl)
-| Rust | [return/branca](https://github.com/return/branca) | MIT | [brycx/orion](https://github.com/brycx/orion)
+| Rust | [return/branca](https://github.com/return/branca) | MIT | [orion-rs/orion](https://github.com/orion-rs/orion)
 
 ## Acceptance Test Vectors
 
